@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    height: 56px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yt-icons {
+    height: 100%;
+}
