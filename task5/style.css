@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1vw;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #373737;
+    color: white;
+    border: 10px solid rgb(12, 119, 112);
+}
+
+input,
+textarea {
+    color: white;
+}
+
+[class^="box-"] {
+    display: grid;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    height: 100vh;
+}
+
+.box-header {
+    display: grid;
+    background-color: #373737;
+    padding: 0 23px 5px 20px;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    gap: 4%;
+
+    grid-template-columns: 1fr 1fr 1.2fr 0.8fr;
+    white-space: nowrap;
+}
+
+.header-1 {
+    justify-self: center;
+    align-self: end;
+    transform: translate(0, 15px);
+    font-size: 3em;
+    /*font-weight: bold; */
+}
+
+.header-2,
+.header-3 {
+    display: grid;
+    align-self: end;
+    column-gap: 5px;
+
+    grid-template-columns: auto 1fr;
+
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.header-2>input,
+.header-3>input {
+    background: transparent;
+    /* прозорий фон */
+    outline: none;
+    /* вимикаємо рамки активності поля input */
+    border: none;
+    /* вимикаємо рамки навкого поля input */
+    border-bottom: 2px solid gray;
+    margin-bottom: 5px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.header-4 {
+    display: grid;
+    justify-items: stretch;
+    align-self: end;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    margin-bottom: 7px;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-4>p {
+    text-align: right;
+}
+
+.header-4>input {
+    width: 1.4em;
+    justify-self: left;
+}
+
+.box-todo {
+    margin-top: 4px;
+    display: grid;
+    background-color: #a59d9d;
+    border: 1px solid gray;
+    border-radius: 0 1vw 1vw 0;
+
+    padding: 0 25px 10px 30px;
+    /*grid-area: todo;*/
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 8;
+
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.box-todo>p {
+    padding-top: 5px;
+    align-self: center;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.box-todo>p:first-child {
+    text-align: right;
+}
+
+.box-todo>div {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    border-bottom: 2px solid gray;
+}
+
+.box-todo>div>input[type="checkbox"] {
+    width: 1.4em;
+    align-self: left;
+}
+
+.box-todo>div>input[type="text"] {
+    transform: translate(0, 6px);
+    background: transparent;
+    /* прозорий фон */
+    outline: none;
+    /* вимикаємо рамки активності поля input */
+    border: none;
+    /* вимикаємо рамки навкого поля input */
+    margin-bottom: 5px;
+
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.box-day {
+    margin-top: 4px;
+    display: grid;
+    /*grid-area: day;*/
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 8;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+[class^="day-"] {
+    background-color: rgb(12, 119, 112);
+    border: 1px solid gray;
+    border-radius: 1vw;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 10% 90%;
+}
+
+[class^="day-"]>p {
+    align-self: center;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+[class^="day-"]>input {
+    width: 1.4em;
+    justify-self: left;
+}
+
+[class^="day-"]>textarea {
+    background-color: rgb(12, 119, 112);
+    resize: none;
+    outline-color: #b4cecc;
+    border: none;
+    margin: 10px 10px;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.days {
+    display: grid;
+    /*border: 1px solid gray;*/
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.day6 {
+    border-radius: 1vw 1vw 0 0;
+    outline-color: #b4cecc;
+    border: 1px solid gray;
+    background-color: rgb(12, 119, 112);
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 20% 80%;
+}
+
+.day7 {
+    border-radius: 0 0 1vw 1vw;
+    border: 1px solid gray;
+    background-color: rgb(12, 119, 112);
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 20% 80%;
+}
+
+.days p {
+    align-self: center;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.days input {
+    width: 1.4em;
+    justify-self: left;
+}
+
+.days textarea {
+    background-color: rgb(12, 119, 112);
+    resize: none;
+    border: none;
+    outline-color: #b4cecc;
+    margin: 10px 10px;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    font-size: 1em;
+    font-weight: 400;
+}
